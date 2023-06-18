@@ -1,17 +1,4 @@
 local lib = LibStub("CustomNames")
-
-lib:RegisterCallback("Name_Added", function(event, name, customName)
-	print("Added: " .. name .. " is now Renamed to " .. customName)
-end)
-
-lib:RegisterCallback("Name_Removed", function(event, name)
-	print("Deleted: " .. name .. " is no longer Renamed")
-end)
-
-lib:RegisterCallback("Name_Update", function(event, name, customName, oldCustomName)
-	print("Edited: " .. name .. " is now Renamed to " .. customName .. " (was " .. oldCustomName .. ")")
-end)
-
 local Translit = LibStub("LibTranslit-1.0")
 local translitMark = "!"
 local E, L, V, P, G = unpack(ElvUI)
