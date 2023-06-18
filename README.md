@@ -3,14 +3,14 @@
 [![Release][SVG-Release]][Release]
 [![CustomNames][SVG-CustomNames]][CustomNames]  
 # CustomNames
-Adds ElvUI Tags for CustomNames.
+Adds ElvUI Tags for [CustomNames](https://www.curseforge.com/wow/addons/libcustomnames).
 
 [//]: # (Links)
 
 [Discord]: https://discord.com/invite/v3gYmYamGJ (Join the Discord)
 [PayPal]: https://www.paypal.com/donate/?hosted_button_id=PSQ4D3HXNZKMG (Donate via PayPal)
 [Release]: https://github.com/Jodsderechte/CustomNames_ElvUI/releases/latest (Latest release)
-[CustomNames] : https://github.com/Jodsderechte/CustomNames
+[CustomNames]: https://github.com/Jodsderechte/CustomNames
 
 [//]: # (Images)
 [SVG-Discord]: https://img.shields.io/badge/Discord-7289da?logo=discord&logoColor=fff&style=flat-square
