@@ -3,7 +3,7 @@
 [![Release][SVG-Release]][Release]
 [![CustomNames][SVG-CustomNames]][CustomNames]  
 # CustomNames
-Adds ElvUI Tags for CustomNames.
+Adds ElvUI Tags for [CustomNames](https://www.curseforge.com/wow/addons/libcustomnames).
 
 [//]: # (Links)
 
