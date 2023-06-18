@@ -1,0 +1,14 @@
+## Interface: 100100
+## Title: CustomNames
+## Version: @project-version@
+## Notes: Adds ElvUI support for CustomNames
+## Author: Jods
+## X-Curse-Project-ID: 
+## X-Wago-ID: 
+## X-WoWI-ID: 
+## RequiredDeps: Elvui, CustomNames
+
+#Libs
+embeds.xml
+
+CustomNames_ElvUI.lua
