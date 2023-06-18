@@ -3,9 +3,9 @@
 ## Version: @project-version@
 ## Notes: Adds ElvUI support for CustomNames
 ## Author: Jods
-## X-Curse-Project-ID: 
-## X-Wago-ID: 
-## X-WoWI-ID: 
+## X-Curse-Project-ID: 876916
+## X-Wago-ID: v63o3L6b
+## X-WoWI-ID: 26594
 ## RequiredDeps: ElvUI, CustomNames
 
 #Libs
