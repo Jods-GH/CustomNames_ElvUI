@@ -1,4 +1,4 @@
-## Interface: 100100
+## Interface: 100105
 ## Title: CustomNames_ElvUI
 ## Version: @project-version@
 ## Notes: Adds ElvUI support for CustomNames
