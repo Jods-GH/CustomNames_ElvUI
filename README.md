@@ -14,6 +14,6 @@ Adds ElvUI Tags for [CustomNames](https://www.curseforge.com/wow/addons/libcusto
 
 [//]: # (Images)
 [SVG-Discord]: https://img.shields.io/badge/Discord-7289da?logo=discord&logoColor=fff&style=flat-square
-[SVG-PayPal]: https://custom-icon-badges.demolab.com/badge/-Donate-lightgrey?style=flat-square&logo=paypal&color=007CB1
+[SVG-PayPal]: https://custom-icon-badges.demolab.com/badge/-Support-lightgrey?style=flat-square&logo=kofi&color=222222
 [SVG-CustomNames]: https://badgen.net/github/release/Jodsderechte/CustomNames?style=flat-square
 [SVG-Release]: https://badgen.net/github/release/Jodsderechte/CustomNames_ElvUI?style=flat-square
