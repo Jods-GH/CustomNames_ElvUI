@@ -1,4 +1,4 @@
-## Interface: 110000
+## Interface: 110002
 ## Title: CustomNames_ElvUI
 ## Version: @project-version@
 ## Notes: Adds ElvUI support for CustomNames
@@ -7,6 +7,7 @@
 ## X-Wago-ID: v63o3L6b
 ## X-WoWI-ID: 26594
 ## RequiredDeps: ElvUI, CustomNames
+## OptionalDeps: ViragDevTool
 
 #Libs
 embeds.xml
