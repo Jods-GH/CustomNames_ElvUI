@@ -9,6 +9,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	local HealthDeficitTagName = format('health:deficit-percent:CustomName-%s', textFormat)
 	E:AddTag(HealthDeficitTagName, 'UNIT_HEALTH UNIT_MAXHEALTH UNIT_NAME_UPDATE', function(unit)
 		local cur, max = UnitHealth(unit), UnitHealthMax(unit)
+		if issecretvalue and issecretvalue(cur) or canaccessvalue and not canaccessvalue(cur) then return _TAGS['health:deficit-percent:nostatus'](unit) end
 		local deficit = max - cur
 
 		if deficit > 0 and cur > 0 then
@@ -22,6 +23,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	local NameAbbreviatedTagName = format('CustomName:abbrev:%s', textFormat)
 	E:AddTag(NameAbbreviatedTagName, 'UNIT_NAME_UPDATE INSTANCE_ENCOUNTER_ENGAGE_UNIT', function(unit)
 		local name = lib.UnitName(unit)
+		if issecretvalue and issecretvalue(name) or canaccessvalue and not canaccessvalue(name) then return name end
 		if name and strfind(name, '%s') then
 			name = E.TagFunctions.Abbrev(name)
 		end
@@ -35,6 +37,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	local NameTagName = format('CustomName:%s', textFormat)
 	E:AddTag(NameTagName, 'UNIT_NAME_UPDATE INSTANCE_ENCOUNTER_ENGAGE_UNIT', function(unit)
 		local name = lib.UnitName(unit)
+		if issecretvalue and issecretvalue(name) or canaccessvalue and not canaccessvalue(name) then return name end
 		if name then
 			return E:ShortenString(name, length)
 		end
@@ -45,6 +48,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	E:AddTag(StatusTagName, 'UNIT_NAME_UPDATE UNIT_CONNECTION PLAYER_FLAGS_CHANGED UNIT_HEALTH INSTANCE_ENCOUNTER_ENGAGE_UNIT', function(unit)
 		local status = UnitIsDead(unit) and L["Dead"] or UnitIsGhost(unit) and L["Ghost"] or not UnitIsConnected(unit) and L["Offline"]
 		local name = lib.UnitName(unit)
+		if issecretvalue and issecretvalue(name) or canaccessvalue and not canaccessvalue(name) then return name end
 		if status then
 			return status
 		elseif name then
@@ -55,7 +59,9 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	-- name translit
 	local TranslitTagName = format('CustomName:%s:translit', textFormat)
 	E:AddTag(TranslitTagName , 'UNIT_NAME_UPDATE INSTANCE_ENCOUNTER_ENGAGE_UNIT', function(unit)
-		local name = Translit:Transliterate(lib.UnitName(unit), translitMark)
+		local rawName = lib.UnitName(unit)
+		if issecretvalue and issecretvalue(rawName) or canaccessvalue and not canaccessvalue(rawName) then return rawName end
+		local name = Translit:Transliterate(rawName, translitMark)
 		if name then
 			return E:ShortenString(name, length)
 		end
@@ -65,6 +71,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	local TargetTagName = format('CustomNameTarget:%s', textFormat)
 	E:AddTag(TargetTagName, 'UNIT_TARGET', function(unit)
 		local targetName = lib.UnitName(unit..'target')
+		if issecretvalue and issecretvalue(targetName) or canaccessvalue and not canaccessvalue(targetName) then return targetName end
 		if targetName then
 			return E:ShortenString(targetName, length)
 		end
@@ -74,6 +81,7 @@ for textFormat, length in pairs({ veryshort = 5, short = 10, medium = 15, long =
 	local TargetTranslitTagName = format('CustomNameTarget:%s:translit', textFormat)
 	E:AddTag(TargetTranslitTagName, 'UNIT_TARGET', function(unit)
 		local targetName = Translit:Transliterate(lib.UnitName(unit..'target'), translitMark)
+		if issecretvalue and issecretvalue(targetName) or canaccessvalue and not canaccessvalue(targetName) then return targetName end
 		if targetName then
 			return E:ShortenString(targetName, length)
 		end
