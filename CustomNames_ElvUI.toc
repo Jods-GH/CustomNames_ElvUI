@@ -1,4 +1,4 @@
-## Interface: 120105, 16001, 50504, 38002, 20506, 11509
+## Interface: 120105, 120107, 16001, 50504, 38002, 20506, 11509
 ## Title: CustomNames_ElvUI
 ## Version: @project-version@
 ## Notes: Adds ElvUI support for CustomNames
