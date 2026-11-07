@@ -6,6 +6,7 @@
 ## X-Curse-Project-ID: 876916
 ## X-Wago-ID: v63o3L6b
 ## X-WoWI-ID: 26594
+## IconTexture: Interface\AddOns\CustomNames_ElvUI\Media\Logo.tga
 ## RequiredDeps: ElvUI, CustomNames
 ## OptionalDeps: ViragDevTool
 ## Category-enUS: User Interface
